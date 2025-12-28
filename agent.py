@@ -10,7 +10,7 @@ def generate_response(prompt):
         response = requests.post(
             f"{API_URL}/generate-text", 
             json = {"prompt": prompt},
-            timeout=10,
+            timeout=60,
         )
 
         response.raise_for_status()
