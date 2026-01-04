@@ -14,4 +14,5 @@ def generate_response(prompt):
         )
 
         response.raise_for_status()
-        return response.json()
+        data = response.json()
+        return {"response": data["result"]}
